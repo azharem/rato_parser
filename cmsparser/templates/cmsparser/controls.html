@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="container">
+    <div class="center">
+        <p>
+            <table>
+                {% for control in controls %}
+                    <tr>
+                        <td>{{ control.control_number }}</td>
+                        <td>{{ control.control_type }}</td>
+                        <td>{{ control.control_name }}</td>
+                        <td>{{ control.control_set_version_number }}</td>
+                        <td>{{ control.authorization_package_name }}</td>
+                        <td>{{ control.allocation_status }}</td>
+                        <td>{{ control.overall_update_date|date:'m/d/Y' }}</td>
+                        <td>{{ control.overall_control_status }}</td>
+                        <td>{{ control.assessment_status }}</td>
+                        <td>{{ control.tracking_id }}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </p>
+    </div>
+</div>
+</body>
+</html>
